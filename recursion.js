@@ -15,6 +15,10 @@ function count(n, sum = 0, path = "") {
     return;
   }
 
+  if (sum > best) {
+    return;
+  }
+
   if (n % 2 == 0) {
     count(n / 2, sum + 1, path + " /2");
   }
